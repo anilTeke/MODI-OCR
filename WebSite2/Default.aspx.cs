@@ -19,7 +19,7 @@ public partial  class _Default : System.Web.UI.Page
     {
         string filePath = Server.MapPath(Path.GetFileName(FileUpload1.PostedFile.FileName));
         FileUpload1.SaveAs(filePath);
-        string extractText = this.ExtractTextFromImage(filePath);
+        string extractText = this.ExtractTextFromImageBasic(filePath); //ExtractTextFromImageBasic : string indexof & subsitution, ExtractTextFromImage : Image Process
         lblText.Text = extractText.Replace(Environment.NewLine, "<br />");
     }
 
@@ -32,6 +32,10 @@ public partial  class _Default : System.Web.UI.Page
 
         string extractedText = modiImage.Layout.Text;
         modiDocument.Close();
+
+        int index = (int) extractedText.IndexOf("No") + 3;
+        extractedText = extractedText.Substring(index, 10);
+
         return extractedText;
     }
 
