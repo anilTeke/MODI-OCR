@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<!-- 
+  Visual Studio global web project settings.
+-->
+<VisualWebDeveloper>
+
+  <comReferences>
+    <reference Name="interop.modi" ID="{A5EDEDF4-2BBC-45F3-822B-E60C278A1A79}\12.0\0"/>
+  </comReferences>
+</VisualWebDeveloper>
